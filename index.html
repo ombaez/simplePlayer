@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simple Player</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="leftContainer">
+        <ul class="songsList">
+          <li class="song">
+            Loading..
+          </li>
+          <li class="song">
+            Loading..
+          </li>
+        </ul>
+      </div>
+      <div class="rightContainer">
+        <audio class="audio" controls></audio>
+      </div>
+      <form
+        class="uploadForm"
+        action="/songs"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        Upload Song:
+        <input type="file" name="song" />
+        <input type="submit" value="Upload" />
+      </form>
+    </div>
+    <script src="/jquery/jquery.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

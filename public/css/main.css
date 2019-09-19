@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #121314;
+  color: #dfe0e6;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.leftContainer {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.songsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.song {
+  padding: 20px;
+  background-color: #1c1c1f;
+  border-bottom: 2px solid #121314;
+  cursor: pointer;
+}
+
+.song:hover {
+  opacity: 0.8;
+}
+
+.rightContainer {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploadForm {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.leftContainer::-webkit-scrollbar {
+  width: 0.5em;
+}
+.leftContainer::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+@media (max-width: 600px) {
+  .app {
+    flex-direction: column;
+  }
+  .leftContainer {
+    flex: 3;
+  }
+  .rightContainer {
+    flex: 1;
+  }
+  .uploadForm {
+    display: none;
+  }
+}
